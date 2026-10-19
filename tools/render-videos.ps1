@@ -32,19 +32,19 @@ try {
     & $compiler @compilerArgs
     if ($LASTEXITCODE -ne 0) { throw 'Offscreen renderer compilation failed' }
     foreach ($item in @(
-        @{ Speed = 100; File = 'demo.webm' },
-        @{ Speed = 200; File = 'demo-2x-speed.webm' },
-        @{ Speed = 400; File = 'demo-4x-speed.webm' }
+        @{ Speed = 100; File = 'demo.mp4' },
+        @{ Speed = 200; File = 'demo-2x-speed.mp4' },
+        @{ Speed = 400; File = 'demo-4x-speed.mp4' }
     )) {
         $destination = Join-Path $root ('docs\' + $item.File)
-        $temporary = Join-Path $root ('docs\' + $item.File.Replace('.webm', '.rendering.webm'))
+        $temporary = Join-Path $root ('docs\' + $item.File.Replace('.mp4', '.rendering.mp4'))
         $temporaryFiles += $temporary
         & $exe (Join-Path $root 'dist\Frame Bounce.scr') $ffmpeg $temporary $item.Speed
         if ($LASTEXITCODE -ne 0) { throw "Offscreen render failed for $($item.File)" }
         Move-Item -LiteralPath $temporary -Destination $destination -Force
     }
 
-    $normalVideo = Join-Path $root 'docs\demo.webm'
+    $normalVideo = Join-Path $root 'docs\demo.mp4'
     foreach ($preview in @(
         @{ File = 'preview.png'; Args = @('-ss', '2', '-i', $normalVideo, '-frames:v', '1') },
         @{ File = 'preview-small.png'; Args = @('-ss', '2', '-i', $normalVideo, '-vf', 'scale=800:-1', '-frames:v', '1') }

@@ -1,4 +1,4 @@
-// Renders Frame Bounce into a WebM without showing a window or capturing the desktop.
+// Renders Frame Bounce into an MP4 without showing a window or capturing the desktop.
 // Build with tools/render-videos.ps1. This is a media-generation tool, not part of the .scr.
 using System;
 using System.Diagnostics;
@@ -40,7 +40,7 @@ internal static class OffscreenRender
     [STAThread]
     static int Main(string[] args)
     {
-        if (args.Length != 4) throw new ArgumentException("Usage: offscreen-render.exe screensaver.scr ffmpeg.exe output.webm speed-percent");
+        if (args.Length != 4) throw new ArgumentException("Usage: offscreen-render.exe screensaver.scr ffmpeg.exe output.mp4 speed-percent");
         int speed = int.Parse(args[3]);
         if (speed != 100 && speed != 200 && speed != 400) throw new ArgumentException("Speed must be 100, 200, or 400");
         var assembly = Assembly.LoadFrom(args[0]);
@@ -87,7 +87,7 @@ internal static class OffscreenRender
             SetField(saver, "initialized", true);
 
             var ffmpeg = new ProcessStartInfo(args[1]);
-            ffmpeg.Arguments = "-hide_banner -loglevel error -y -f rawvideo -pixel_format bgra -video_size 1920x1080 -framerate 30 -i pipe:0 -frames:v 600 -c:v libvpx-vp9 -b:v 0 -crf 32 -deadline realtime -cpu-used 5 -pix_fmt yuv420p -an \"" + args[2] + "\"";
+            ffmpeg.Arguments = "-hide_banner -loglevel error -y -f rawvideo -pixel_format bgra -video_size 1920x1080 -framerate 30 -i pipe:0 -frames:v 600 -c:v libx264 -preset medium -crf 20 -pix_fmt yuv420p -movflags +faststart -an \"" + args[2] + "\"";
             ffmpeg.UseShellExecute = false;
             ffmpeg.RedirectStandardInput = true;
             using (var encoder = Process.Start(ffmpeg))

@@ -2,7 +2,7 @@
 
 A little something for the Sooners: a Windows screensaver where the Steam Frame and its two controllers drift, spin, and bounce across your screen, bumping into each other along the way.
 
-https://github.com/user-attachments/assets/4649cc08-e2b2-435b-b983-aecec7ab1886
+https://github.com/user-attachments/assets/b28aa608-9335-4c91-bd3e-3fda72d220e3
 
 ## Download and install
 
