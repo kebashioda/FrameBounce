@@ -51,3 +51,5 @@ The media script finds `ffmpeg.exe` on `PATH` or in WinGet packages; pass `-Ffmp
 Frame Bounce is a free, unofficial fan-made screensaver by [@kebashioda](https://github.com/kebashioda). It is not affiliated with, sponsored by, or endorsed by Valve. The source code is licensed under the [MIT License](LICENSE).
 
 The device artwork was adapted from an image published in [Notebookcheck's Steam Frame article](https://www.notebookcheck.net/Steam-Frame-launching-anytime-now-as-more-shipments-reach-Valve-s-US-warehouses.1320895.0.html), which credits Valve. The original image and all derived artwork—including sprites embedded in the screensaver and images shown in previews and videos—are **not** covered by the MIT license. Steam and Steam Frame names and logos belong to Valve.
+
+Valve has confirmed that it is fine with Frame Bounce's proposed non-commercial use of the artwork. This remains an unofficial fan project; Valve has not endorsed it.
