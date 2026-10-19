@@ -29,13 +29,7 @@ powershell -NoProfile -ExecutionPolicy Bypass -File .\build.ps1
 
 The script uses the .NET Framework C# compiler included with Windows and writes `dist\Frame Bounce.scr`. The three PNG files in `assets/` are embedded into the binary.
 
-To regenerate those sprites from the transparent cutout in `artwork/`, run `tools\extract-sprites.ps1` before rebuilding. With FFmpeg installed, generate the three 20-second demos and preview images offscreen:
-
-```powershell
-powershell -NoProfile -ExecutionPolicy Bypass -File .\tools\render-videos.ps1
-```
-
-The media script finds `ffmpeg.exe` on `PATH` or in WinGet packages; pass `-FfmpegPath` to specify another location. The settings screenshot is included in `docs/`.
+To regenerate the sprites from the transparent cutout in `artwork/`, run `tools\extract-sprites.ps1` before rebuilding. The settings screenshot and demo videos are included in `docs/`.
 
 | Directory | Contents |
 | --- | --- |
