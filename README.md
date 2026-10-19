@@ -19,6 +19,8 @@ You can also run it directly from PowerShell without installing it:
 
 Move the mouse, click, or press a key to close the full-screen screen saver. The settings dialog controls object size, movement and rotation speed, and brightness. The three sprites are embedded in the `.scr` file.
 
+![Frame Bounce settings dialog](docs/settings-small.png)
+
 ## Build from source
 
 On 64-bit Windows with .NET Framework 4.x, run:
