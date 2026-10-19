@@ -6,7 +6,7 @@ https://github.com/user-attachments/assets/4649cc08-e2b2-435b-b983-aecec7ab1886
 
 ## Download and install
 
-Download the included [Frame Bounce.scr directly](https://github.com/kebashioda/FrameBounce/raw/refs/heads/main/dist/Frame%20Bounce.scr) on a 64-bit Windows PC with .NET Framework 4.x. In File Explorer, right-click the downloaded file and choose **Install** (on Windows 11, it may be under **Show more options**). Select **Frame Bounce** in Windows Screen Saver Settings and adjust its settings there. If your browser opens a GitHub file page, use that page's **Download raw file** button; saving the page itself produces an HTML file that Windows cannot run.
+Download the included [Frame Bounce.scr](https://github.com/kebashioda/FrameBounce/raw/refs/heads/main/dist/Frame%20Bounce.scr) on a 64-bit Windows PC with .NET Framework 4.x. In File Explorer, right-click the file and choose **Install** (on Windows 11, it may be under **Show more options**). Select **Frame Bounce** in Windows Screen Saver Settings and adjust its settings there.
 
 The included `.scr` file is not digitally signed.
 
